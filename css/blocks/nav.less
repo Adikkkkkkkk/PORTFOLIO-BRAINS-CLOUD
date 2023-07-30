@@ -3,6 +3,7 @@
 .nav {
 	display: flex;
 	height: 100%;
+	align-items: center;
 }
 
 .nav__link {
@@ -12,12 +13,43 @@
 	font-weight: 700;
 	text-decoration: none;
 
-	border: 2px solid transparent;
-	border-radius: 20px;
-	padding: 0.66rem 2rem;
+	margin-left: 2rem;
+	position: relative;
 
-	&:hover,
-	&.active {
+	&:after {
+		content: '';
+		width: 0;
+		height: 2px;
+		background-color: @black;
+
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		z-index: 1;
+
+		transition: width 0.1s linear;
+	}
+
+	&:hover:not(.nav__link--button) {
+		&:after {
+			width: 100%;
+		}
+	}
+	&:active {
 		border: 2px solid @black;
+	}
+
+	// Modificator
+	&--button {
+		padding: 0.66rem 2rem;
+		border: 2px solid @black;
+		border-radius: 20px;
+
+		transition: background-color 0.2s linear, color 0.2s linear;
+
+		&:hover {
+			background-color: @black;
+			color: @white;
+		}
 	}
 }
