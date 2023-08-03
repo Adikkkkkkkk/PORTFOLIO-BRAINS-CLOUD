@@ -3,7 +3,9 @@
 .intro__inner {
 	display: flex;
 	padding-top: 100px;
+	position: relative;
 
+	background: url('/img/intro/symbols.png') right bottom no-repeat;
 	padding-bottom: 120px;
 	border-bottom: 1px solid fade(@gray, 30%);
 }
@@ -31,5 +33,8 @@
 }
 
 .intro__photo {
-	width: 50%;
+	position: absolute;
+	bottom: -1px;
+	right: 0;
+	z-index: 1;
 }
