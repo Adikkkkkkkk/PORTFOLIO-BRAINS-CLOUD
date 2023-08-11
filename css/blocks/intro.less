@@ -37,4 +37,12 @@
 	bottom: -1px;
 	right: 0;
 	z-index: 1;
+
+	filter: drop-shadow(1px 1px 1px @gray);
+
+	transition: filter 0.1s linear;
+
+	&:hover {
+		filter: drop-shadow(-10px -2px 10px @gray);
+	}
 }
