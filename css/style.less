@@ -10,6 +10,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem;
 	color: @black;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 p {
@@ -45,6 +49,10 @@ h6 {
 @import 'blocks/about';
 @import 'blocks/reviews';
 @import 'blocks/news';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/modal-work';
+@import 'blocks/timeline';
 
 // HELPERS
 @import 'helpers';
