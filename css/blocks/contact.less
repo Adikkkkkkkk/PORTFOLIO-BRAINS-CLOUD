@@ -1,0 +1,54 @@
+// main: ../style.less
+
+.contact {
+	display: flex;
+}
+
+.contact__left {
+	width: 47%;
+	margin: 2rem;
+}
+
+.contact__subtitle {
+	font-size: 16px;
+	font-weight: 400;
+	color: @black;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.contact__connect {
+	list-style: none;
+	margin: 0 0 44px;
+	padding: 0;
+}
+
+.contact__number,
+.contact__email {
+	font-size: 14px;
+	font-weight: 300;
+	color: @black;
+	display: flex;
+	align-items: center;
+
+	& img {
+		margin-right: 0.75rem;
+	}
+	& a {
+		text-decoration: none;
+		color: inherit;
+	}
+	& a:hover {
+		text-decoration: underline;
+		color: @gray-light;
+	}
+}
+
+.contact__number {
+	margin-bottom: 0.75rem;
+}
+
+.contact__right {
+	width: 53%;
+	background: @black url(https://placehold.it/480x700) center no-repeat;
+}
