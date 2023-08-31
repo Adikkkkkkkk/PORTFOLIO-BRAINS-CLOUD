@@ -2,21 +2,40 @@
 
 .intro__inner {
 	display: flex;
-	padding-top: 100px;
+	padding-top: 6.6rem;
+	padding-bottom: 8rem;
 	position: relative;
 
 	background: url('/img/intro/symbols.png') right bottom no-repeat;
-	padding-bottom: 120px;
 	border-bottom: 1px solid fade(@gray, 30%);
+
+	@media @tablet {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+
+		background-size: 415px auto;
+	}
+	@media @mobile-sm {
+		background-size: 400px auto;
+	}
 }
 
 .intro__content {
 	width: 50%;
+
+	@media @mobile-sm {
+		width: 100%;
+	}
 }
+
 .intro__subtitle {
 	font-size: 2.13rem;
 	font-weight: 200;
 	color: @black;
+
+	@media @tablet {
+		font-size: 1.5rem;
+	}
 }
 
 .intro__title {
@@ -24,6 +43,10 @@
 	font-size: 3rem;
 	color: @black;
 	font-weight: 700;
+
+	@media @tablet {
+		font-size: 2rem;
+	}
 }
 
 .intro__text {
@@ -44,5 +67,13 @@
 
 	&:hover {
 		filter: drop-shadow(-10px -2px 10px @gray);
+	}
+
+	@media @tablet {
+		width: 350px;
+	}
+
+	@media @mobile-sm {
+		display: none;
 	}
 }

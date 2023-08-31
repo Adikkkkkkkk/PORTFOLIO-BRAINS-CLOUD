@@ -17,6 +17,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<title>Portfolio</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
 </head>
 
 <body class='no-scroll'>
@@ -37,8 +38,13 @@
 					<a class='nav__link' href="#">work</a>
 					<a class='nav__link' href="#">about me</a>
 					<a class='nav__link' href="#">blog</a>
-					<a class='nav__link nav__link--button' href="#">hire me</a>
+					<a class='nav__link nav__link--button' href="#" data-modal='#modal_hire_me'>hire me</a>
 				</nav>
+
+				<div class="burger">
+					<img class='burger__icon' src="img/burger/menu_9xhnviwhqhet.svg" alt="">
+				</div>
+
 			</div>
 		</div>
 	</header>
@@ -54,27 +60,39 @@
 
 					<div class="social">
 						<a href="#" class='social__link'>
-							<img src="img/intro/behance.svg" alt="behance">
+							<div class="sl__background sl__background-1">
+								<img src="img/intro/behance.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 						<a href="#" class='social__link'>
-							<img src="img/intro/dribbble.svg" alt="">
+							<div class="sl__background sl__background-2">
+								<img src="img/intro/dribble.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 						<a href="#" class='social__link'>
-							<img src="img/intro/in.svg" alt="">
+							<div class="sl__background sl__background-3">
+								<img src="img/intro/linkedin.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 						<a href="#" class='social__link'>
-							<img src="img/intro/facebook.svg" alt="">
+							<div class="sl__background sl__background-4">
+								<img src="img/intro/facebook.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 						<a href="#" class='social__link'>
-							<img src="img/intro/instagram.svg" alt="">
+							<div class="sl__background sl__background-5">
+								<img src="img/intro/instagram.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 						<a href="#" class='social__link'>
-							<img src="img/intro/twitter.svg" alt="">
+							<div class="sl__background sl__background-6">
+								<img src="img/intro/twitter.svg" alt="" class="sl__icon">
+							</div>
 						</a>
 					</div>
 
-					<a class='btn' href='#'>HIRE ME</a>
-					<button class='btn' type="button">SEE MY RESUME</button>
+					<a class='btn' href='#' data-modal='#modal_hire_me'>HIRE ME</a>
+					<button class='btn' type="button" data-modal='#modal_resume'>SEE MY RESUME</button>
 				</div>
 
 				<img src="img/intro/photo.png" alt="" class="intro__photo">
@@ -87,19 +105,19 @@
 		<div class="container">
 
 			<div class="works__nav">
-				<a class='works_nav-link' href="#">All works</a>
-				<a class='works_nav-link' href="#">App</a>
-				<a class='works_nav-link' href="#">Websites</a>
-				<a class='works_nav-link' href="#">Interaction</a>
+				<a class='works_nav-link' href="#" data-filter='all'>All works</a>
+				<a class='works_nav-link' href="#" data-filter='app'>App</a>
+				<a class='works_nav-link' href="#" data-filter='website'>Websites</a>
+				<a class='works_nav-link' href="#" data-filter='interaction'>Interaction</a>
 			</div>
 
 			<div class="portfolio">
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='app'>
 
-					<div class="work">
+					<div class="work" data-modal='#modal_project_1'>
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: app</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -109,12 +127,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='website'>
 
-					<div class="work">
+					<div class="work" data-modal='#modal_project_2'>
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: website</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -124,12 +142,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='interaction'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: interaction</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -139,12 +157,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='app'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: app</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -154,12 +172,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='website'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: website</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -169,12 +187,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='interaction'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: interaction</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -184,12 +202,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='app'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: app</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -199,12 +217,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='website'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: website</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -214,12 +232,12 @@
 
 				</div>
 
-				<div class="portfolio__col">
+				<div class="portfolio__col" data-cat='interaction'>
 
 					<div class="work">
 						<img class="work__img" src="https://placehold.it/370x300" alt="workkkk">
 						<div class="work__content">
-							<div class="work__category">Category</div>
+							<div class="work__category">Category: interaction</div>
 							<div class="work__title">
 								Project title
 								<time class="work__date" datetime='2023-06-07 22:00'>2023</time>
@@ -267,8 +285,8 @@
 							doloremque explicabo tenetur quidem sapiente ipsum sequi maiores magnam, incidunt adipisci? Beatae sit
 							consequatur veritatis molestiae?</p>
 					</div>
-					<a class='btn' href='#'>HIRE ME</a>
-					<button class='btn' type="button">SEE MY RESUME</button>
+					<a class='btn' href='#' data-modal='#modal_hire_me'>HIRE ME</a>
+					<button class='btn' type="button" data-modal='#modal_resume'>SEE MY RESUME</button>
 				</div> <!-- /.about__content -->
 			</div> <!-- /.about__inner -->
 
@@ -319,54 +337,59 @@
 
 				<div class="news__col">
 					<div class="blog">
+						<div class="blog__item">
 
-						<div class="blog__img">
-							<time class="blog__date">10<br>june</time>
-							<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+							<div class="blog__img">
+								<time class="blog__date">10<br>june</time>
+								<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+							</div>
+
+							<a href='#' class="blog__title">TEN THE BEST APP IN 2017</a>
+							<p class="blog__category">CATEGORY</p>
+							<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
+								veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
+								assumenda,
+								consectetur harum sapiente sed velit illum.</p>
+							<a class='btn btn--blog' href='#'>READ MORE</a>
+
 						</div>
-
-						<a href='#' class="blog__title">TEN THE BEST APP IN 2017</a>
-						<p class="blog__category">CATEGORY</p>
-						<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
-							veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
-							assumenda,
-							consectetur harum sapiente sed velit illum. Aspernatur.</p>
-						<a class='btn btn--blog' href='#'>READ MORE</a>
-
 					</div>
 
 					<div class="blog">
+						<div class="blog__item">
+							<div class="blog__img">
+								<time class="blog__date">15<br>june</time>
+								<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+							</div>
 
-						<div class="blog__img">
-							<time class="blog__date">15<br>june</time>
-							<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+							<a href='#' class="blog__title">WEBSITE INSPIRATION</a>
+							<p class="blog__category">CATEGORY</p>
+							<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
+								veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
+								assumenda,
+								consectetur harum sapiente sed velit illum.</p>
+							<a class='btn btn--blog' href='#'>READ MORE</a>
+
 						</div>
-
-						<a href='#' class="blog__title">WEBSITE INSPIRATION</a>
-						<p class="blog__category">CATEGORY</p>
-						<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
-							veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
-							assumenda,
-							consectetur harum sapiente sed velit illum. Aspernatur.</p>
-						<a class='btn btn--blog' href='#'>READ MORE</a>
-
 					</div>
 
 					<div class="blog">
-						<div class="blog__img">
-							<time class="blog__date">20<br>june</time>
-							<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+						<div class="blog__item">
+							<div class="blog__img">
+								<time class="blog__date">20<br>june</time>
+								<a href="#"><img class='blog__photo' src="https://placehold.it/370x260/888" alt="some blog"></a>
+							</div>
+
+							<a href='#' class="blog__title">CHANGES IN SOCIAL MEDIA</a>
+							<p class="blog__category">CATEGORY</p>
+							<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
+								veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
+								assumenda,
+								consectetur harum sapiente sed velit <illum></illum>.</p>
+							<a class='btn btn--blog' href='#'>READ MORE</a>
 						</div>
 
-						<a href='#' class="blog__title">CHANGES IN SOCIAL MEDIA</a>
-						<p class="blog__category">CATEGORY</p>
-						<p class="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illo consectetur
-							veritatis assumenda dolores dolorem mollitia fugit? Accusantium voluptate minima vitae nostrum
-							assumenda,
-							consectetur harum sapiente sed velit illum. Aspernatur.</p>
-						<a class='btn btn--blog' href='#'>READ MORE</a>
 					</div>
-
 				</div>
 
 				<div class="news__footer">
@@ -411,7 +434,7 @@
 					<a href='#' class="footer__right--link">About me</a>
 					<a href='#' class="footer__right--link">Blog</a>
 					<a href='#' class="footer__right--link">Contact</a>
-					<a href='#' class="footer__right--link footer__right--link--btn">Hire me</a>
+					<a href='#' class="footer__right--link footer__right--link--btn" data-modal='#modal_hire_me'>Hire me</a>
 				</nav>
 
 			</div>
@@ -421,17 +444,24 @@
 
 	<!-- MODALS -->
 
-	<!-- MODAL 1 -->
-	<div class="modal" style='display :none'>
+	<!-- MODAL 1 (works1) -->
+	<div class="modal" id='modal_project_1'>
 		<div class="modal__dialog">
 
-			<button class="modal__close" type='button'>
+			<button class="modal__close" type='button' data-close>
 				<img src="img/modal/remove_button_6tg65dfbhia8.svg" alt="close">
 			</button>
 
 			<div class="modal__work">
 				<div class="modal__work-preview">
-					<img class='modal__work-photo' src="https://placehold.it/790x780/999" alt="work-photo">
+					<div data-slider="slick">
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/999" alt="work-photo">
+						</div>
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/333" alt="work-photo">
+						</div>
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/000" alt="work-photo">
+						</div>
+					</div>
 				</div>
 
 				<div class="modal__work-content">
@@ -462,9 +492,68 @@
 
 
 					<div class="modal__work-footer">
-						<button class='modal__work-btn modal__work-btn--prev' type='button'><span
+						<button class='modal__work-btn modal__work-btn--prev slickPrev' type='button'><span
 								class='modal__work-btn--arrow'>&#60;</span> Previous</button>
-						<button class='modal__work-btn modal__work-btn--next' type='button'>Next <span
+						<button class='modal__work-btn modal__work-btn--next slickNext' type='button'>Next <span
+								class='modal__work-btn--arrow'>&#62;</span></button>
+					</div>
+				</div> <!-- /.modal__work-content -->
+			</div> <!-- /.modal__work -->
+
+		</div> <!-- /.modal__dialog -->
+	</div> <!-- /.modal -->
+
+	<!-- MODAL 1 (works2) -->
+	<div class="modal" id='modal_project_2'>
+		<div class="modal__dialog">
+
+			<button class="modal__close" type='button' data-close>
+				<img src="img/modal/remove_button_6tg65dfbhia8.svg" alt="close">
+			</button>
+
+			<div class="modal__work">
+				<div class="modal__work-preview">
+					<div data-slider="slick">
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/999" alt="work-photo">
+						</div>
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/333" alt="work-photo">
+						</div>
+						<div><img class='modal__work-photo' src="https://placehold.it/790x780/000" alt="work-photo">
+						</div>
+					</div>
+				</div>
+
+				<div class="modal__work-content">
+
+					<div class="modal__work-header">
+						<h3 class="modal__work-title">Project Title 2</h3>
+						<div class="modal__work-info">
+							category <span class='modal__work-info--divider'>|</span> 2018
+						</div>
+					</div>
+
+					<div class="modal__work-client">
+						<div class='modal__work-client--cl'>Client:</div>
+						<div class='modal__work-client--ag'>Creative Agency</div>
+					</div>
+
+					<div class="modal__work-text">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illo, consectetur repellat beatae ducimus
+							sint nemo, quis quas repudiandae aliquam ab suscipit repellendus labore cumque natus expedita aut
+							consequuntur! Aperiam.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illo, consectetur repellat beatae ducimus
+							sint nemo, quis quas repudiandae aliquam ab suscipit repellendus labore cumque natus expedita aut
+							consequuntur! Aperiam.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illo, consectetur repellat beatae ducimus
+							sint nemo, quis quas repudiandae aliquam ab suscipit repellendus labore cumque natus expedita aut
+							consequuntur! Aperiam.</p>
+					</div>
+
+
+					<div class="modal__work-footer">
+						<button class='modal__work-btn modal__work-btn--prev slickPrev' type='button'><span
+								class='modal__work-btn--arrow'>&#60;</span> Previous</button>
+						<button class='modal__work-btn modal__work-btn--next slickNext' type='button'>Next <span
 								class='modal__work-btn--arrow'>&#62;</span></button>
 					</div>
 				</div> <!-- /.modal__work-content -->
@@ -474,10 +563,10 @@
 	</div> <!-- /.modal -->
 
 	<!-- MODAL 2 -->
-	<div class="modal" style='display :none'>
+	<div class="modal" id='modal_resume'>
 		<div class="modal__dialog">
 
-			<button class="modal__close" type='button'>
+			<button class="modal__close" type='button' data-close>
 				<img src="img/modal/remove_button_6tg65dfbhia8.svg" alt="close">
 			</button>
 
@@ -486,7 +575,7 @@
 			</div>
 
 			<div class="modal__buttons">
-				<a href='#' class="modal__button">Download PDF</a>
+				<a href='data/resume.txt' class="modal__button" download='Resume PDF'>Download PDF</a>
 				<a href='#' class="modal__button modal__button--r">Print</a>
 			</div>
 
@@ -586,16 +675,16 @@
 				</div> <!-- /.timeline__col--right -->
 			</div> <!-- /.timeline -->
 
-			<div class="modal__dialog-btn"><a class='btn btn--modal' href="#">Hire me</a></div>
+			<div class="modal__dialog-btn"><a class='btn btn--modal' href="#" data-modal='#modal_hire_me'>Hire me</a></div>
 
 		</div><!-- /.modal__dialog -->
 	</div><!-- /.modal -->
 
 	<!-- MODAL 3 -->
-	<div class="modal" style='display :none'>
+	<div class="modal" id='modal_hire_me'>
 		<div class="modal__dialog modal__dialog--sm">
 
-			<button class="modal__close" type='button'>
+			<button class="modal__close" type=' button' data-close>
 				<img src="img/modal/remove_button_6tg65dfbhia8.svg" alt="close">
 			</button>
 
@@ -641,6 +730,10 @@
 		</div> <!-- /.modal__dialog--sm-->
 	</div> <!-- /.modal__dialog-2 -->
 	</div> <!-- /.modal -->
+
+	<!-- JavaScript -->
+	<script src='js/slick.min.js'></script>
+	<script src='js/app.js'></script>
 </body>
 
 </html>

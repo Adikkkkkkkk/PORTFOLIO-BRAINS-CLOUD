@@ -3,6 +3,10 @@
 .news {
 	margin-top: 200px;
 	margin-bottom: 8rem;
+	@media @tablet {
+		margin-top: 12rem;
+		margin-bottom: 4rem;
+	}
 }
 .news__header {
 	text-align: center;
@@ -12,6 +16,9 @@
 	font-size: 45px;
 	font-weight: 700;
 	color: @black;
+	@media @mobile {
+		font-size: 2rem;
+	}
 }
 
 .news__suptitle {
@@ -30,6 +37,19 @@
 .blog {
 	width: 33.33333%;
 	padding: 0 1rem;
+
+	@media @tablet {
+		width: 100%;
+		margin-bottom: 2rem;
+		padding: 0;
+	}
+}
+
+.blog__item {
+	@media @tablet {
+		max-width: 370px;
+		margin: 0 auto;
+	}
 }
 
 .blog__img {
@@ -107,6 +127,9 @@
 
 .news__footer {
 	text-align: right;
+	@media @tablet {
+		text-align: center;
+	}
 }
 
 .news__link {

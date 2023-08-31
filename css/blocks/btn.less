@@ -45,9 +45,19 @@
 	&--blog {
 		font-size: 14px;
 		padding: 1em 1.7em;
+		@media @tablet {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	&--modal {
 		padding: 16px 53px;
+	}
+
+	@media @tablet {
+		font-size: 1rem;
+		padding: 1em 1.5em;
+		min-width: 140px;
 	}
 }

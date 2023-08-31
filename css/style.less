@@ -11,9 +11,9 @@ body {
 	font-size: 1rem;
 	color: @black;
 
-	// &.no-scroll {
-	// 	overflow: hidden;
-	// }
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 p {
@@ -35,6 +35,9 @@ h6 {
 	box-sizing: border-box;
 }
 
+// Vendor
+@import 'vendor/slick';
+
 // Block
 @import 'blocks/container';
 @import 'blocks/header';
@@ -55,6 +58,7 @@ h6 {
 @import 'blocks/timeline';
 @import 'blocks/contact';
 @import 'blocks/form';
+@import 'blocks/burger';
 
 // HELPERS
 @import 'helpers';
