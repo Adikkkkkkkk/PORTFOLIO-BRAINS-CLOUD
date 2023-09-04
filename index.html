@@ -9,6 +9,14 @@
 	<meta name='google' content='notranslate'>
 	<meta name='description' content='Рахимов Адиль Портфолио'>
 	<meta name='Keywords' content='Создание сайтов, вёрстка сайтов'>
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,35 +30,42 @@
 
 <body class='no-scroll'>
 	<!-- HEADER -->
-	<header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="user">
-					<div class="user__avatar">
-						<img src="https://placehold.it/57/333" alt="">
+	<header class="header" id='header'>
+		<div class="header__relative">
+			<div class="container">
+				<div class="header__inner">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="https://placehold.it/57/333" alt="">
+						</div>
+						<div class="user__content">
+							<div class="user__name">Adil<br>Rakhimov</div>
+							<div class="user__prof">UI &amp; UX</div>
+						</div>
 					</div>
-					<div class="user__content">
-						<div class="user__name">Adil<br>Rakhimov</div>
-						<div class="user__prof">UI &amp; UX</div>
-					</div>
-				</div>
-				<nav class="nav">
-					<a class='nav__link' href="#">work</a>
-					<a class='nav__link' href="#">about me</a>
-					<a class='nav__link' href="#">blog</a>
-					<a class='nav__link nav__link--button' href="#" data-modal='#modal_hire_me'>hire me</a>
-				</nav>
 
-				<div class="burger">
-					<img class='burger__icon' src="img/burger/menu_9xhnviwhqhet.svg" alt="">
-				</div>
+					<nav class="nav" id='nav'>
+						<a class='nav__link' href="#" data-scroll='#works'>work</a>
+						<a class='nav__link' href="#" data-scroll='#about'>about me</a>
+						<a class='nav__link' href="#" data-scroll='#news'>blog</a>
+						<a class='nav__link nav__link--button' href="#" data-modal='#modal_hire_me'>hire me</a>
 
+
+					</nav>
+
+					<button class="burger" type='button' id='navToggle'>
+						<div class="burger__item">
+							"Menu"
+						</div>
+					</button>
+
+				</div>
 			</div>
 		</div>
 	</header>
 
 	<!-- INTRO -->
-	<section class="intro">
+	<section class="intro" id='intro'>
 		<div class="container">
 			<div class="intro__inner">
 				<div class="intro__content">
@@ -59,32 +74,32 @@
 					<div class='intro__text'>UI &amp; UX Designer</div>
 
 					<div class="social">
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-1">
 								<img src="img/intro/behance.svg" alt="" class="sl__icon">
 							</div>
 						</a>
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-2">
 								<img src="img/intro/dribble.svg" alt="" class="sl__icon">
 							</div>
 						</a>
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-3">
 								<img src="img/intro/linkedin.svg" alt="" class="sl__icon">
 							</div>
 						</a>
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-4">
 								<img src="img/intro/facebook.svg" alt="" class="sl__icon">
 							</div>
 						</a>
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-5">
 								<img src="img/intro/instagram.svg" alt="" class="sl__icon">
 							</div>
 						</a>
-						<a href="#" class='social__link'>
+						<a href="#" target='_blank' class='social__link'>
 							<div class="sl__background sl__background-6">
 								<img src="img/intro/twitter.svg" alt="" class="sl__icon">
 							</div>
@@ -101,7 +116,7 @@
 	</section>
 
 	<!-- WORKS -->
-	<div class="works">
+	<div class="works" id='works'>
 		<div class="container">
 
 			<div class="works__nav">
@@ -256,7 +271,7 @@
 	</div> <!-- /.works -->
 
 	<!-- ABOUT -->
-	<section class="about">
+	<section class="about" id='about'>
 		<div class="container">
 			<div class="about__inner">
 				<div class="about__img">
@@ -268,18 +283,21 @@
 				<div class="about__content">
 					<h3 class="about__suptitle">about me</h3>
 					<h2 class="about__title">who am i</h2>
-					<div class="about__text">
-						<p style='--d: 0.2s'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit neque, officia
+					<div class="about__text" id='about__text'>
+						<p class='about__text-p about__text-p-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+							neque, officia
 							provident
 							odio dolores
 							doloremque explicabo tenetur quidem sapiente ipsum sequi maiores magnam, incidunt adipisci? Beatae sit
 							consequatur veritatis molestiae?</p>
-						<p style='--d: 0.5s'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit neque, officia
+						<p class='about__text-p about__text-p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+							neque, officia
 							provident
 							odio dolores
 							doloremque explicabo tenetur quidem sapiente ipsum sequi maiores magnam, incidunt adipisci? Beatae sit
 							consequatur veritatis molestiae?</p>
-						<p style='--d: 0.8s'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit neque, officia
+						<p class='about__text-p about__text-p-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+							neque, officia
 							provident
 							odio dolores
 							doloremque explicabo tenetur quidem sapiente ipsum sequi maiores magnam, incidunt adipisci? Beatae sit
@@ -294,8 +312,7 @@
 	</section>
 
 	<!-- REVIEWS -->
-
-	<div class="reviews">
+	<div class="reviews" id='reviews'>
 		<div class="container">
 
 			<div class="reviews__item">
@@ -326,7 +343,7 @@
 	</div> <!-- /.reviews -->
 
 	<!-- NEWS -->
-	<section class="news">
+	<section class="news" id='news'>
 		<div class="container">
 			<div class="news__inner">
 
@@ -430,9 +447,9 @@
 				</div>
 
 				<nav class="footer__right">
-					<a href='#' class="footer__right--link">Work</a>
-					<a href='#' class="footer__right--link">About me</a>
-					<a href='#' class="footer__right--link">Blog</a>
+					<a href='#' class="footer__right--link" data-scroll='#works'>Work</a>
+					<a href='#' class="footer__right--link" data-scroll='#about'>About me</a>
+					<a href='#' class="footer__right--link" data-scroll='#news'>Blog</a>
 					<a href='#' class="footer__right--link">Contact</a>
 					<a href='#' class="footer__right--link footer__right--link--btn" data-modal='#modal_hire_me'>Hire me</a>
 				</nav>
@@ -582,7 +599,10 @@
 			<div class="timeline">
 				<div class="timeline__col text-right timeline__col--left">
 					<div class="timeline__title">experience</div>
-					<div class="timeline__date">2020 - Present</div>
+					<div class="timeline__date">
+						<div>2020 - Present</div>
+						<span class='timeline__date--line'></span>
+					</div>
 					<div class="timeline__prof">Frelancer</div>
 					<div class="timeline__pos">Art Director</div>
 					<div class="timeline__text">
@@ -591,7 +611,10 @@
 							condimentum.</p>
 					</div>
 
-					<div class="timeline__date">2020 - 2021</div>
+					<div class="timeline__date">
+						<div>2020 - 2021</div>
+						<span class='timeline__date--line'></span>
+					</div>
 					<div class="timeline__prof">The Best Agency</div>
 					<div class="timeline__pos">Art Director</div>
 					<div class="timeline__text">

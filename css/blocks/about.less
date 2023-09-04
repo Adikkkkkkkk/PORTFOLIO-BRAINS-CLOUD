@@ -39,6 +39,7 @@
 
 		.img {
 			position: relative;
+			margin: 0 auto;
 		}
 	}
 }
@@ -80,6 +81,11 @@
 
 		margin-bottom: 2rem;
 		padding-left: 0;
+
+		text-align: center;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -120,11 +126,31 @@
 	line-height: 1.6;
 	margin-bottom: 2.6rem;
 
-	& p {
-		// animation
-		opacity: 0;
-		animation: reveal 0.5s forwards var(--d);
+	&.animate .about__text-p {
+		&-1 {
+			--d: 0.2s;
+		}
+		&-2 {
+			--d: 0.4s;
+		}
+		&-3 {
+			--d: 0.6s;
+		}
 	}
+
+	@media @tablet {
+		font-size: 1.2rem;
+	}
+
+	@media @mobile {
+		font-size: 0.9rem;
+	}
+}
+
+.about__text-p {
+	opacity: 0;
+	animation: reveal 0.5s forwards var(--d);
+
 	@keyframes reveal {
 		from {
 			transform: translateY(20px);
@@ -134,7 +160,8 @@
 			transform: none;
 		}
 	}
-	@media @mobile {
-		font-size: 0.8rem;
+
+	@media @tablet {
+		opacity: 1;
 	}
 }

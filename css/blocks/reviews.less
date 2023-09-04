@@ -6,6 +6,9 @@
 	background: #332f30 url('../../img/reviews/Компонент\ 3\ –\ 1.png') center
 		no-repeat;
 	position: relative;
+	@media @mobile {
+		padding: 2.4rem 0;
+	}
 }
 
 .reviews__inner {
@@ -21,8 +24,12 @@
 	color: @white;
 	line-height: 2.2;
 
+	@media @tablet {
+		font-size: 1.1rem;
+	}
+
 	@media @mobile {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 	}
 }
 

@@ -28,6 +28,9 @@
 	background-color: @white;
 	&--sm {
 		max-width: 900px;
+		@media @mobile-sm {
+			max-width: 375px;
+		}
 	}
 
 	transform: rotateX(90deg);
@@ -63,6 +66,10 @@
 // MODAL2
 .modal__content {
 	padding: 5rem 1rem;
+
+	@media @mobile-sm {
+		padding: 2rem 1rem 1.5rem;
+	}
 }
 
 .modal__title {
@@ -70,13 +77,21 @@
 	font-size: 45px;
 	font-weight: 700;
 	color: @black;
+
+	@media @mobile-sm {
+		font-size: 40px;
+	}
 }
 
 .modal__buttons {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 
 	margin-bottom: 64px;
+	@media @mobile-sm {
+		margin-bottom: 34px;
+	}
 }
 .modal__button {
 	background: none;
@@ -103,10 +118,22 @@
 		padding: 10px 56px;
 		margin-left: 1rem;
 	}
+
+	@media @mobile-sm {
+		margin: 0.5rem 0;
+		width: 80%;
+		text-align: center;
+
+		font-size: 14px;
+	}
 }
 
 // Button
 .modal__dialog-btn {
 	text-align: center;
 	margin-bottom: 65px;
+
+	@media @mobile-sm {
+		margin-bottom: 35px;
+	}
 }

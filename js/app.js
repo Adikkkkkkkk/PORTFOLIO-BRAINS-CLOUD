@@ -28,7 +28,7 @@ $(function () {
 		}
 	})
 
-	// MODAL ================================
+	// MODAL ==============================================
 
 	// записываем в переменную эл-ты с атрибутом data-modal
 	const modalCall = $('[data-modal]')
@@ -109,5 +109,89 @@ $(function () {
 		let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]')
 
 		currentSlider.slick('slickNext')
+	})
+
+	// MOBILE NAV @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	const navToggle = $('#navToggle')
+	const nav = $('#nav')
+
+	navToggle.on('click', function (event) {
+		event.preventDefault()
+
+		nav.toggleClass('show')
+		navToggle.toggleClass('animate')
+	})
+
+	// Fixed header ====================================
+
+	let header = $('#header')
+	let intro = $('#intro')
+	let introH = intro.innerHeight()
+	let scrollPos = $(window).scrollTop()
+
+	$(window).on('scroll', function () {
+		scrollPos = $(this).scrollTop()
+
+		if (introH < scrollPos) {
+			header.addClass('fixed')
+		} else {
+			header.removeClass('fixed')
+		}
+	})
+	// "ABOUT" p animation
+	let about = $('#about')
+	let aboutText = $('#about__text')
+
+	$(window).on('scroll', function () {
+		scrollPos = $(this).scrollTop()
+
+		if (scrollPos >= 1468 && scrollPos <= 2468) {
+			aboutText.addClass('animate')
+		} else {
+			aboutText.removeClass('animate')
+		}
+
+		console.log(scrollPos)
+	})
+
+	// Smooth scroll ====================================
+
+	$('[data-scroll]').on('click', function (event) {
+		event.preventDefault()
+
+		// получаем значпение элемента
+		let elementID = $(this).data('scroll')
+		let elementOffset = $(elementID).offset().top
+
+		let isWorks = function () {
+			return elementID === '#works'
+		}
+
+		if (elementID === '#works') {
+			$('html, body').animate(
+				{
+					scrollTop: elementOffset - 100,
+				},
+				500
+			)
+			console.log(isWorks())
+		}
+		if (elementID === '#news') {
+			$('html, body').animate(
+				{
+					scrollTop: elementOffset - 70,
+				},
+				700
+			)
+			console.log(isWorks())
+		} else {
+			$('html, body').animate(
+				{
+					scrollTop: elementOffset - 150,
+				},
+				700
+			)
+			console.log(isWorks())
+		}
 	})
 })
