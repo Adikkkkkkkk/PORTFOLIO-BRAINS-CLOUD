@@ -55,6 +55,7 @@
 
 .timeline__date {
 	align-items: center;
+
 	gap: 10px;
 
 	font-size: 14px;
@@ -64,18 +65,19 @@
 
 	div {
 		@media @mobile-sm {
-			flex-basis: 19px;
+			flex-basis: 30%;
 			text-align: left;
-			font-size: 16px;
+			font-size: 15px;
 		}
 	}
 
 	&--line {
 		display: none;
 
-		background-color: @gray;
-		width: 13rem;
-		height: 10px;
+		background-color: @gray-light;
+		width: 100%;
+		flex-basis: 70%;
+		height: 2px;
 
 		@media @mobile-sm {
 			display: inline-block;
@@ -131,6 +133,7 @@
 	@media @mobile-sm {
 		font-size: 14px;
 		margin-bottom: 28px;
+		text-align: start;
 	}
 }
 
@@ -193,6 +196,10 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	@media @mobile-sm {
+		display: block;
+	}
 }
 
 .timeline__awards-year {
@@ -202,4 +209,32 @@
 	text-decoration: underline;
 
 	margin-right: 10px;
+
+	div {
+		@media @mobile-sm {
+			flex-basis: 19px;
+			text-align: left;
+			font-size: 15px;
+		}
+	}
+
+	&--line {
+		display: none;
+
+		background-color: @gray-light;
+		width: 100%;
+		height: 2px;
+
+		@media @mobile-sm {
+			display: inline-block;
+		}
+	}
+
+	@media @mobile-sm {
+		margin-bottom: 12px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex-shrink: 2;
+	}
 }

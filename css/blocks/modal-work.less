@@ -2,12 +2,17 @@
 
 .modal__work {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .modal__work-preview {
 	width: 65%;
 	position: relative;
 	overflow: hidden;
+
+	@media @mobile-sm {
+		width: 100%;
+	}
 }
 
 .modal__work-photo {
@@ -23,6 +28,10 @@
 	width: 35%;
 	padding: 3.4rem 6.6rem 1rem 1.73rem;
 	position: relative;
+
+	@media @mobile-sm {
+		width: 100%;
+	}
 }
 
 .modal__work-title {

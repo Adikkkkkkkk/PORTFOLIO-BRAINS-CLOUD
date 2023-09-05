@@ -138,21 +138,22 @@ $(function () {
 			header.removeClass('fixed')
 		}
 	})
-	// "ABOUT" p animation
-	let about = $('#about')
+
 	let aboutText = $('#about__text')
 
-	$(window).on('scroll', function () {
-		scrollPos = $(this).scrollTop()
+	const textObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				aboutText.addClass('animate')
+			} else {
+				aboutText.removeClass('animate')
+			}
+		})
+	}, {})
 
-		if (scrollPos >= 1468 && scrollPos <= 2468) {
-			aboutText.addClass('animate')
-		} else {
-			aboutText.removeClass('animate')
-		}
-
-		console.log(scrollPos)
-	})
+	document
+		.querySelectorAll('.about__text')
+		.forEach(text => textObserver.observe(text))
 
 	// Smooth scroll ====================================
 
